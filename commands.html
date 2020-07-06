@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="font/ValorantFont.ttf" rel="stylesheet">
+        <link rel="stylesheet" href="style-commands.css">
+        <meta charset="UTF-8">
+		<meta name="description" content="Omen | A Valorant Discord bot that provides all of the info you need and other useful things. Omen is built on Node.js and uses the Discord.js framework.">
+		<meta name="keywords" content="Discord, Valorant Discord, Discord bots, Discord bot, Omen, Omen Discord">
+		<meta name="author" content="Omen">
+		<title>Omen - Discord</title>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1>Omen</h1>
+                <ul class="nav_links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="commands.html">Commands</a></li>
+                    <li><a href="https://discord.gg/Tyrdahz">Server</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <script>
+            function openCommand(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            </script>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCommand(event, 'General')">General</button>
+            <button class="tablinks" onclick="openCommand(event, 'Valorant')">Valorant</button>
+            <button class="tablinks" onclick="openCommand(event, 'Tournament')">Tournament</button>
+            <button class="tablinks" onclick="openCommand(event, 'Broadcast')">Broadcast</button>
+        </div>
+
+        <div id="General" class="tabcontent">
+            <h1>Admin Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Change Prefix</td>
+                        <td>Change Omen's prefix for your server</td>
+                        <td>setprefix</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>Server Settings</td>
+                        <td>Will show you your server settings</td>
+                        <td>showsettings</td>
+                        <td>Admin</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="other-topics">Members Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bot Info</td>
+                        <td>Get info about Omen</td>
+                        <td>botinfo</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Help</td>
+                        <td>Get some help with using Omen's commands ⠀⠀⠀</td>
+                        <td>help</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Bot Ping</td>
+                        <td>Get info about Omen network status</td>
+                        <td>ping</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Invite Link</td>
+                        <td>Get Omen's invitation link</td>
+                        <td>invitelink</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Vote</td>
+                        <td>Vote in Omen's page to support</td>
+                        <td>vote</td>
+                        <td>Member</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="https://galcohenx.gitbook.io/omen/">If you are having trouble, join Omen server or click this link!</a>
+        </div>
+        <div id="Valorant" class="tabcontent">
+            <h1>Admin Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>News Option</td>
+                        <td>Enable/Disable auto news</td>
+                        <td>newsoption</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>News Channel</td>
+                        <td>Set the channel for auto news</td>
+                        <td>newschannel [#channel]</td>
+                        <td>Admin</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="other-topics">Members Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Agent</td>
+                        <td>Get info about specifc Agent</td>
+                        <td>agent [agent]</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Weapon</td>
+                        <td>Get info about specific Weapon</td>
+                        <td>weapon [weapon]</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Skin</td>
+                        <td>Get info about specific Skin</td>
+                        <td>skin [skin]</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Map</td>
+                        <td>Get info about specific Map</td>
+                        <td>map [map]</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Patch Notes</td>
+                        <td>Shows the current Valorant patch notes</td>
+                        <td>patch</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>All Agents</td>
+                        <td>Get all Valorant Agents</td>
+                        <td>allagents</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>All Weapons</td>
+                        <td>Get all Valorant Weapons</td>
+                        <td>allweapons</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>All Maps</td>
+                        <td>Get all Valorant Maps</td>
+                        <td>allmaps</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Random Agent</td>
+                        <td>Get random agent to play with</td>
+                        <td>randomagent</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Random Map</td>
+                        <td>Get random map to play</td>
+                        <td>randommap</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Valorant Specs</td>
+                        <td>Show Valorant required pc specs</td>
+                        <td>specs</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Valorant Server</td>
+                        <td>Show info about specific Valorant server</td>
+                        <td>status [region]</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Ranked Info</td>
+                        <td>Show how Valorant ranking works</td>
+                        <td>rank</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Currency Info</td>
+                        <td>Show Valorant currency</td>
+                        <td>currency</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Game Modes Info</td>
+                        <td>Show Valorant Game Modes</td>
+                        <td>modes</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>Credits Info</td>
+                        <td>Show Valorant credits system</td>
+                        <td>creds</td>
+                        <td>Member</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="https://galcohenx.gitbook.io/omen/">If you are having trouble, join Omen server or click this link!</a>
+        </div>
+        <div id="Tournament" class="tabcontent">
+            <h1>Admin Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Role Managers</td>
+                        <td>Set server managers role, only people will this role will have permission to use Managers Commands</td>
+                        <td>rolemanager</td>
+                        <td>Admin</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="other-topics">Managers Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Match</td>
+                        <td>Start a match, leader1 will be RED team leader, leader2 will be BLUE team leader</td>
+                        <td>match [@leader1 @leader2]</td>
+                        <td>Managers</td>
+                    </tr>
+                    <tr>
+                        <td>Finish Match</td>
+                        <td>End running match, first will show matches under manager control, then will ask for a pick</td>
+                        <td>endmatch</td>
+                        <td>Managers</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="other-topics">Members Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Set Info</td>
+                        <td>Set own user info</td>
+                        <td>setinfo</td>
+                        <td>Members</td>
+                    </tr>
+                    <tr>
+                        <td>Get Info</td>
+                        <td>Get own info or others info</td>
+                        <td>getinfo [@user]</td>
+                        <td>Members</td>
+                    </tr>
+                    <tr>
+                        <td>Total Matches</td>
+                        <td>Get all running matches on server</td>
+                        <td>totalmatches</td>
+                        <td>Members</td>
+                    </tr>
+                    <tr>
+                        <td>Get Match</td>
+                        <td>Get specifc match info</td>
+                        <td>getmatch [@leader]</td>
+                        <td>Members</td>
+                    </tr>
+                    <tr>
+                        <td>Managers</td>
+                        <td>Get all managers on the server</td>
+                        <td>managers</td>
+                        <td>Members</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="https://galcohenx.gitbook.io/omen/">If you are having trouble, join Omen server or click this link!</a>
+        </div>
+        <div id="Broadcast" class="tabcontent">
+            <h1>Admin Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Twitch Option</td>
+                        <td>Enable/Disable Twitch alerts</td>
+                        <td>twitchoption</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>Twitch Alerts Channel</td>
+                        <td>Set the channel for Twitch alerts</td>
+                        <td>twitchalertschannel [#channel]</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>Twitch Role</td>
+                        <td>Set server Twitch streamers role</td>
+                        <td>roletwitch</td>
+                        <td>Admin</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="other-topics">Twitch Streamers Commands</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Twitch Channel</td>
+                        <td>Add your Twitch channel to this server alerts</td>
+                        <td>twitchchannel</td>
+                        <td>Streamer</td>
+                    </tr>
+                    <tr>
+                        <td>Remove Channel</td>
+                        <td>Remove your Twitch channel from this server alerts</td>
+                        <td>removetwitch</td>
+                        <td>Streamer</td>
+                    </tr>
+                    <tr>
+                        <td>Channel List</td>
+                        <td>Show all Twitch channels on this server</td>
+                        <td>listtwitch</td>
+                        <td>Streamer</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="https://galcohenx.gitbook.io/omen/">If you are having trouble, join Omen server or click this link!</a>
+        </div>
+    </body>
+</html>
