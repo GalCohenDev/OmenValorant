@@ -104,6 +104,14 @@ header ul li a:hover {
     margin-top: 20px;
 }
 
+.tabcontent h3 {
+    background-color: #ff4654;
+    border-radius: 25px;
+    margin-top: 15px;
+    display:inline-block;
+    padding: 10px;
+}
+
 .tabcontent a {
     color: #50fdfb;
     font-family: valorant;

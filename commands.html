@@ -6,11 +6,15 @@
         <meta charset="UTF-8">
 		<meta name="description" content="Omen | A Valorant Discord bot that provides all of the info you need and other useful things. Omen is built on Node.js and uses the Discord.js framework.">
 		<meta name="keywords" content="Discord, Valorant Discord, Discord bots, Discord bot, Omen, Omen Discord">
-		<meta name="author" content="Omen">
+        <meta name="author" content="Omen">
+        <link rel="icon" href="images/Omen.png">
 		<title>Omen - Discord</title>
     </head>
 
     <body>
+        <div>
+            
+        </div>
         <header>
             <div>
                 <h1>Omen</h1>
@@ -36,15 +40,21 @@
               evt.currentTarget.className += " active";
             }
             </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                document.getElementById("defaultButton").click();
+            });
+            </script>
 
         <div class="tab">
-            <button class="tablinks" onclick="openCommand(event, 'General')">General</button>
+            <button id="defaultButton" class="tablinks" onclick="openCommand(event, 'General')">General</button>
             <button class="tablinks" onclick="openCommand(event, 'Valorant')">Valorant</button>
             <button class="tablinks" onclick="openCommand(event, 'Tournament')">Tournament</button>
             <button class="tablinks" onclick="openCommand(event, 'Broadcast')">Broadcast</button>
         </div>
 
         <div id="General" class="tabcontent">
+            <h3>Don't use [ ] when using Omen!</h3>
             <h1>Admin Commands</h1>
             <table class="content-table">
                 <thead>
@@ -115,6 +125,7 @@
             </table>
         </div>
         <div id="Valorant" class="tabcontent">
+            <h3>Don't use [ ] when using Omen!</h3>
             <h1>Admin Commands</h1>
             <table class="content-table">
                 <thead>
@@ -251,6 +262,7 @@
             </table>
         </div>
         <div id="Tournament" class="tabcontent">
+            <h3>Don't use [ ] when using Omen!</h3>
             <h1>Admin Commands</h1>
             <table class="content-table">
                 <thead>
@@ -340,6 +352,7 @@
             </table>
         </div>
         <div id="Broadcast" class="tabcontent">
+            <h3>Don't use [ ] when using Omen!</h3>
             <h1>Admin Commands</h1>
             <table class="content-table">
                 <thead>
