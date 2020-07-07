@@ -18,10 +18,21 @@
                 <ul class="nav_links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="commands.html">Commands</a></li>
+                    <li><a href="index.html" onclick="omenDiscordServer()" id="server_button">Server</a></li>
+                    <li><a href="index.html" onclick="getOmen()" id="get_omen_button">Get Omen</a></li>
                 </ul>
             </div>
         </header>
         
+        <script>
+            function omenDiscordServer() {
+                window.open("https://discord.gg/Tyrdahz", "_blank");
+            }
+            function getOmen() {
+                window.open("https://discordapp.com/oauth2/authorize?client_id=718915731000918096&scope=bot&permissions=268667904", "_blank");
+            }
+            </script>
+
         <div class="main-wallpaper">
             <p id="about">OMEN is a Valorant Discord bot Which was brought to you by Gal
                 <br>He will provide all of the info you need and other useful things
